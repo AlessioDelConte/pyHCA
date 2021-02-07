@@ -10,7 +10,7 @@ try:
 except:
     import joblib
 import lightgbm
-from pyHCA.core.disorderHCA_data import model_descriptors, key_order
+from pyHCA.core.disorderHCA_data import model_descriptors, key_order, thresholds
 from pyHCA import HCA 
 from pyHCA.core.seq_util import transform_seq, check_if_msa
 
@@ -263,8 +263,8 @@ def main():
             domains, clusters = prepare_sequence(seq)
             features = compute_features(seq, domains, clusters, feature_range_to_name, descriptors, params.verbose)
             features = pd.DataFrame(features)[keys]
-            probas = lgb_classifier.predict(features)
-            classes = (probas > 0.5).astype(int)
+            probas = 1 - lgb_classifier.predict(features)
+            classes = (probas > thresholds[model_name]).astype(int)
             outf.write(">{}\n".format(prot))
             cnt = 0
             for i in range(len(seq)):

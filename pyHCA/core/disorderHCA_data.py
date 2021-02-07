@@ -1,3 +1,7 @@
+thresholds = {"noDSoverlap.h5": 0.21144929990676975,
+              "allowDSoverlap.h5": 0.2387910186069273,
+              }
+
 key_order = {
   "noDSoverlap.h5":['d_next_domain',
              'LEWP710101_domain',
