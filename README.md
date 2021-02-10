@@ -107,6 +107,9 @@ Example:
     $ hcatk dispred -i data/orc1.fasta -o data/orc1.allowDSoverlap.txt -m pyHCA/data/allowDSoverlap.h5
 
 
+Models allowDSoverlap.h5 and noDSoverlap.h5 can be found in the data directory of the github repository.
+
+
 Output format:
 **************
 
