@@ -83,7 +83,7 @@ Predict protein disorder at the amino acid level using HCA and physico-chemical 
 
     $ hcatk dispred -h
 
-    usage: hcatk disorder [-h] -i FASTAFILE -o OUTPUTFILE -m MODEL [--verbose]
+    usage: hcatk dispred [-h] -i FASTAFILE -o OUTPUTFILE -m MODEL [--verbose]
 
 
 Arguments:
