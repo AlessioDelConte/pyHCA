@@ -269,9 +269,9 @@ def main():
             cnt = 0
             for i in range(len(seq)):
                 if seq[i] == "X":
-                    outf.write("{} {} nan nan\n".format(i+1, seq[i]))
+                    outf.write("{}\t{}\tnan\tnan\n".format(i+1, seq[i]))
                 else:
-                    outf.write("{} {} {:.3f} {}\n".format(i+1, seq[i],  probas[cnt], classes[cnt]))
+                    outf.write("{}\t{}\t{:.3f}\t{}\n".format(i+1, seq[i],  probas[cnt], classes[cnt]))
                     cnt += 1
 
     sys.exit(0)
